@@ -1,0 +1,50 @@
+export default {
+  name: 'HerSafe',
+  slug: 'hersafe',
+  version: '1.0.0',
+  orientation: 'portrait',
+  icon: './assets/icon.png',
+  userInterfaceStyle: 'light',
+  splash: {
+    image: './assets/splash.png',
+    resizeMode: 'contain',
+    backgroundColor: '#ffffff'
+  },
+  assetBundlePatterns: [
+    '**/*'
+  ],
+  ios: {
+    supportsTablet: true,
+    bundleIdentifier: 'com.hersafe.app'
+  },
+  android: {
+    adaptiveIcon: {
+      foregroundImage: './assets/adaptive-icon.png',
+      backgroundColor: '#ffffff'
+    },
+    package: 'com.hersafe.app'
+  },
+  web: {
+    favicon: './assets/favicon.png',
+    bundler: 'webpack',
+    build: {
+      babel: {
+        include: ['@expo/vector-icons']
+      }
+    },
+    output: {
+      publicPath: '/'
+    }
+  },
+  extra: {
+    eas: {
+      projectId: 'your-project-id'
+    }
+  },
+  plugins: [
+    // No plugins for now
+  ],
+  experiments: {
+    tsconfigPaths: true
+  }
+};
